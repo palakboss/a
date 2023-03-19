@@ -1,0 +1,473 @@
+Practical
+
+Romanian Map problem
+• In the state space view of the world, finding a solution is finding a path through the state space.
+• When we (as humans) solve a problem like the 8-puzzle we have some idea of what constitutes the 
+next best move.
+• It is hard to program this kind of approach.
+• Instead, we start by programming the kind of repetitive task that computers are good at.
+• A brute force approach to problem solving involves exhaustively searching through the space of all
+possible action sequences to find one that achieves the goal.
+
+
+
+Practical 2
+
+
+Theory:
+There are two common ways to traverse a graph, BFS and DFS. Considering 
+a Tree (or Graph) of huge height and width, both BFS and DFS are not very efficient 
+due to following reasons.
+1. DFS first traverses nodes going through one adjacent of root, then next 
+adjacent. The problem with this approach is, if there is a node close to 
+root, but not in first few subtrees explored by DFS, then DFS reaches that 
+node very late. Also, DFS may not find shortest path to a node (in terms of 
+number of edges).
+2. BFS goes level by level, but requires more space. The space required by 
+DFS is O(d) where d is depth of tree, but space required by BFS is O(n) 
+where n is number of nodes in tree (Why? Note that the last level of tree 
+can have around n/2 nodes and second last level n/4 nodes and in BFS we 
+need to have every level one by one in queue).
+IDDFS combines depth-first search’s space-efficiency and breadth-first search’s fast 
+search (for nodes closer to root).
+How does IDDFS work?
+IDDFS calls DFS for different depths starting from an initial value. In every call, 
+DFS is restricted from going beyond given depth. So basically we do DFS in a BFS 
+fashion.
+
+
+
+Practical 3
+
+ 
+Explanation 
+Consider a square grid having many obstacles and we are given a starting cell and a target 
+cell. We want to reach the target cell (if possible) from the starting cell as quickly as possible. 
+Here A* Search Algorithm comes to the rescue.
+What A* Search Algorithm does is that at each step it picks the node according to a value-‘f’ 
+which is a parameter equal to the sum of two other parameters – ‘g’ and ‘h’. At each step it 
+picks the node/cell having the lowest ‘f’, and process that node/cell.
+We define ‘g’ and ‘h’ as simply as possible below
+g = the movement cost to move from the starting point to a given square on the grid, 
+following the path generated to get there. 
+h = the estimated movement cost to move from that given square on the grid to the final 
+destination. This is often referred to as the heuristic, which is nothing but a kind of smart 
+guess. We really don’t know the actual distance until we find the path, because all sorts of 
+things can be in the way (walls, water, etc.). There can be many ways to calculate this ‘h’ 
+which are discussed in the later sections.
+
+
+
+Practical 4
+
+
+:
+It is simple recursive algorithm that resembles the operation of standard best first 
+search but uses only linear space. It is similar to recursive DFS and differs from Recursive 
+DFS as follows,
+It keeps track of the f value of the best alternative path available from any ancestor of 
+the current node. Instead of continuing indefinitely down the current path.
+
+
+Practical 5
+
+Theory:
+Decision Tree is one of the most powerful and popular algorithms. Decision-tree 
+algorithm falls under the category of supervised learning algorithms. It works for both 
+continuous as well as categorical output variables.
+Assumptions we make while using Decision tree :
+• At the beginning, we consider the whole training set as the root.
+• Attributes are assumed to be categorical for information gain and for gini index, 
+attributes are assumed to be continuous.
+• On the basis of attribute values records are distributed recursively.
+• We use statistical methods for ordering attributes as root or internal node.
+Pseudocode :
+1. Find the best attribute and place it on the root node of the tree.
+2. Now, split the training set of the dataset into subsets. While making the subset 
+make sure that each subset of training dataset should have the same value for 
+an attribute.
+3. Find leaf nodes in all branches by repeating 1 and 2 on each subset
+
+
+
+Practical 6
+
+
+Theory:
+What Is the Genetic Algorithm?
+The genetic algorithm is a method for solving both constrained and unconstrained 
+optimization problems that is based on natural selection, the process that drives biological 
+evolution. The genetic algorithm repeatedly modifies a population of individual solutions. At 
+each step, the genetic algorithm selects individuals from the current population to be parents 
+and uses them to produce the children for the next generation. Over successive generations, 
+the population "evolves" toward an optimal solution. You can apply the genetic algorithm to 
+solve a variety of optimization problems that are not well suited for standard optimization 
+algorithms, including problems in which the objective function is discontinuous, 
+nondifferentiable, stochastic, or highly nonlinear. The genetic algorithm can address 
+problems of mixed integer programming, where some components are restricted to be 
+integer-valued.
+This flow chart outlines the main algorithmic steps. For details, see How the Genetic 
+Algorithm Works.
+The genetic algorithm uses three main types of rules at each step to create the next generation 
+from the current population:
+• Selection rules select the individuals, called parents, that contribute to the population 
+at the next generation. The selection is generally stochastic, and can depend on the 
+individuals' scores.
+• Crossover rules combine two parents to form children for the next generation.
+• Mutation rules apply random changes to individual parents to form children.
+
+
+
+Practical 7
+
+Theory:
+Artificial Neural Network Tutorial provides basic and advanced concepts of ANNs. Our 
+Artificial Neural Network tutorial is developed for beginners as well as professions.
+The term "Artificial neural network" refers to a biologically inspired sub-field of artificial 
+intelligence modeled after the brain. An Artificial neural network is usually a computational 
+network based on biological neural networks that construct the structure of the human brain. 
+Similar to a human brain has neurons interconnected to each other, artificial neural networks 
+also have neurons that are linked to each other in various layers of the networks. These 
+neurons are known as nodes.
+Artificial neural network tutorial covers all the aspects related to the artificial neural network. 
+In this tutorial, we will discuss ANNs, Adaptive resonance theory, Kohonen self-organizing 
+map, Building blocks, unsupervised learning, Genetic algorithm, etc.
+What is Artificial Neural Network?
+The term "Artificial Neural Network" is derived from Biological neural networks that 
+develop the structure of a human brain. Similar to the human brain that has neurons 
+interconnected to one another, artificial neural networks also have neurons that are 
+interconnected to one another in various layers of the networks. These neurons are known as 
+nodes.
+The typical Artificial Neural Network looks something like the given figure.
+39
+Dendrites from Biological Neural Network represent inputs in Artificial Neural Networks, 
+cell nucleus represents Nodes, synapse represents Weights, and Axon represents Output.
+Relationship between Biological neural network and artificial neural network:
+Biological Neural Network Artificial Neural Network
+Dendrites Inputs
+Cell nucleus Nodes
+Synapse Weights
+Axon Output
+An Artificial Neural Network in the field of Artificial intelligence where it attempts to 
+mimic the network of neurons makes up a human brain so that computers will have an option 
+to understand things and make decisions in a human-like manner. The artificial neural 
+network is designed by programming computers to behave simply like interconnected brain 
+cells.
+There are around 1000 billion neurons in the human brain. Each neuron has an association 
+point somewhere in the range of 1,000 and 100,000. In the human brain, data is stored in such 
+a manner as to be distributed, and we can extract more than one piece of this data when 
+necessary from our memory parallelly. We can say that the human brain is made up of 
+incredibly amazing parallel processors.
+We can understand the artificial neural network with an example, consider an example of a 
+digital logic gate that takes an input and gives an output. "OR" gate, which takes two inputs. 
+If one or both the inputs are "On," then we get "On" in output. If both the inputs are "Off," 
+then we get "Off" in output. Here the output depends upon input. Our brain does not perform 
+40
+the same task. The outputs to inputs relationship keep changing because of the neurons in our 
+brain, which are "learning."
+The architecture of an artificial neural network:
+To understand the concept of the architecture of an artificial neural network, we have to 
+understand what a neural network consists of. In order to define a neural network that 
+consists of a large number of artificial neurons, which are termed units arranged in a 
+sequence of layers. Lets us look at various types of layers available in an artificial neural 
+network.
+Artificial Neural Network primarily consists of three layers:
+Input Layer:
+As the name suggests, it accepts inputs in several different formats provided by the 
+programmer.
+Hidden Layer:
+The hidden layer presents in-between input and output layers. It performs all the calculations 
+to find hidden features and patterns.
+Output Layer:
+The input goes through a series of transformations using the hidden layer, which finally 
+results in output that is conveyed using this layer.
+The artificial neural network takes input and computes the weighted sum of the inputs and 
+includes a bias. This computation is represented in the form of a transfer function.
+41
+It determines weighted total is passed as an input to an activation function to produce the 
+output. Activation functions choose whether a node should fire or not. Only those who are 
+fired make it to the output layer. There are distinctive activation functions available that can 
+be applied upon the sort of task we are performing.
+How do artificial neural networks work?
+Artificial Neural Network can be best represented as a weighted directed graph, where the 
+artificial neurons form the nodes. The association between the neurons outputs and neuron 
+inputs can be viewed as the directed edges with weights. The Artificial Neural Network 
+receives the input signal from the external source in the form of a pattern and image in the 
+form of a vector. These inputs are then mathematically assigned by the notations x(n) for 
+every n number of inputs.
+Afterward, each of the input is multiplied by its corresponding weights ( these weights are the 
+details utilized by the artificial neural networks to solve a specific problem ). In general 
+terms, these weights normally represent the strength of the interconnection between neurons 
+inside the artificial neural network. All the weighted inputs are summarized inside the 
+computing unit.
+If the weighted sum is equal to zero, then bias is added to make the output non-zero or 
+something else to scale up to the system's response. Bias has the same input, and weight 
+equals to 1. Here the total of weighted inputs can be in the range of 0 to positive infinity. 
+Here, to keep the response in the limits of the desired value, a certain maximum value is 
+benchmarked, and the total of weighted inputs is passed through the activation function.
+The activation function refers to the set of transfer functions used to achieve the desired 
+output. There is a different kind of the activation function, but primarily either linear or non-
+42
+linear sets of functions. Some of the commonly used sets of activation functions are the 
+Binary, linear, and Tan hyperbolic sigmoidal activation functions. Let us take a look at each 
+of them in details:
+Binary:
+In binary activation function, the output is either a one or a 0. Here, to accomplish this, there 
+is a threshold value set up. If the net weighted input of neurons is more than 1, then the final 
+output of the activation function is returned as one or else the output is returned as 0.
+Sigmoidal Hyperbolic:
+The Sigmoidal Hyperbola function is generally seen as an "S" shaped curve. Here the tan 
+hyperbolic function is used to approximate output from the actual net input. The function is 
+defined as:
+F(x) = (1/1 + exp(-????x))
+
+
+Practical 8
+
+Theory:
+What is Backpropagation?
+Backpropagation is the essence of neural network training. It is the method of fine-tuning the 
+weights of a neural network based on the error rate obtained in the previous epoch (i.e., 
+iteration). Proper tuning of the weights allows you to reduce error rates and make the model 
+reliable by increasing its generalization.
+Backpropagation in neural network is a short form for “backward propagation of errors.” It 
+is a standard method of training artificial neural networks. This method helps calculate the 
+gradient of a loss function with respect to all the weights in the network.
+How Backpropagation Algorithm Works
+The Back propagation algorithm in neural network computes the gradient of the loss function 
+for a single weight by the chain rule. It efficiently computes one layer at a time, unlike a 
+native direct computation. It computes the gradient, but it does not define how the gradient is 
+used. It generalizes the computation in the delta rule.
+Consider the following Back propagation neural network example diagram to understand:
+1. Inputs X, arrive through the preconnected path
+2. Input is modelled using real weights W. The weights are usually randomly selected.
+50
+3. Calculate the output for every neuron from the input layer, to the hidden layers, to the 
+output layer.
+4. Calculate the error in the outputs.
+5. Travel back from the output layer to the hidden layer to adjust the weights such that 
+the error is decreased.
+Keep repeating the process until the desired output is achieved
+Why We Need Backpropagation?
+Most prominent advantages of Backpropagation are:
+• Backpropagation is fast, simple and easy to program
+• It has no parameters to tune apart from the numbers of input
+• It is a flexible method as it does not require prior knowledge about the network
+• It is a standard method that generally works well
+• It does not need any special mention of the features of the function to be learned.
+What is a Feed Forward Network?
+A feedforward neural network is an artificial neural network where the nodes never form a 
+cycle. This kind of neural network has an input layer, hidden layers, and an output layer. It is 
+the first and simplest type of artificial neural network.
+Types of Backpropagation Networks
+Two Types of Backpropagation Networks are:
+• Static Back-propagation
+• Recurrent Backpropagation
+Static back-propagation:
+It is one kind of backpropagation network which produces a mapping of a static input for 
+static output. It is useful to solve static classification issues like optical character recognition.
+Recurrent Backpropagation:
+Recurrent Back propagation in data mining is fed forward until a fixed value is achieved. 
+After that, the error is computed and propagated backward.
+The main difference between both of these methods is: that the mapping is rapid in static 
+back-propagation while it is non-static in recurrent backpropagation.
+51
+Backpropagation Key Points
+• Simplifies the network structure by elements weighted links that have the least effect 
+on the trained network
+• You need to study a group of input and activation values to develop the relationship 
+between the input and hidden unit layers.
+• It helps to assess the impact that a given input variable has on a network output. The 
+knowledge gained from this analysis should be represented in rules.
+• Backpropagation is especially useful for deep neural networks working on error-prone 
+projects, such as image or speech recognition.
+• Backpropagation takes advantage of the chain and power rules allows 
+backpropagation to function with any number of outputs.
+Best practice Backpropagation
+Backpropagation in neural network can be explained with the help of “Shoe Lace” analogy
+Too little tension =
+• Not enough constraining and very loose
+Too much tension =
+• Too much constraint (overtraining)
+• Taking too much time (relatively slow process)
+• Higher likelihood of breaking
+Pulling one lace more than other =
+• Discomfort (bias)
+Disadvantages of using Backpropagation
+• The actual performance of backpropagation on a specific problem is dependent on the 
+input data.
+• Back propagation algorithm in data mining can be quite sensitive to noisy data
+• You need to use the matrix-based approach for backpropagation instead of minibatch
+
+
+Practical 9
+
+Theory:
+A perceptron is not the Sigmoid neuron we use in ANNs or any deep learning networks today.
+The perceptron model is a more general computational model than McCulloch-Pitts neuron. 
+It takes an input, aggregates it (weighted sum) and returns 1 only if the aggregated sum is 
+more than some threshold else returns 0. Rewriting the threshold as shown above and making 
+it a constant input with a variable weight, we would end up with something like the following:
+A single perceptron can only be used to implement linearly separable functions. It takes both 
+real and boolean inputs and associates a set of weights to them, along with a bias (the 
+threshold thing I mentioned above). We learn the weights, we get the function. Let's use a 
+perceptron to learn an OR function.
+OR Function Using A Perceptron
+55
+What’s going on above is that we defined a few conditions (the weighted sum has to be more 
+than or equal to 0 when the output is 1) based on the OR function output for various sets of 
+inputs, we solved for weights based on those conditions and we got a line that perfectly 
+separates positive inputs from those of negative.
+Doesn’t make any sense? Maybe now is the time you go through that post I was talking 
+about. Minsky and Papert also proposed a more principled way of learning these weights 
+using a set of examples (data). Mind you that this is NOT a Sigmoid neuron and we’re not 
+going to do any Gradient Descent.
+Setting Up The Problem
+We are going to use a perceptron to estimate if I will be watching a movie based on historical 
+data with the above-mentioned inputs. The data has positive and negative examples, positive 
+being the movies I watched i.e., 1. Based on the data, we are going to learn the weights using 
+the perceptron learning algorithm. For visual simplicity, we will only assume twodimensional input.
+Perceptron Learning Algorithm
+Our goal is to find the w vector that can perfectly classify positive inputs and negative inputs 
+in our data. I will get straight to the algorithm. Here goes:
+
+
+
+Practical 10
+
+Theory:
+Fuzzy Inference System is the key unit of a fuzzy logic system having decision making as its 
+primary work. It uses the “IF…THEN” rules along with connectors “OR” or “AND” for 
+drawing essential decision rules.
+Characteristics of Fuzzy Inference System
+Following are some characteristics of FIS −
+• The output from FIS is always a fuzzy set irrespective of its input which can be fuzzy 
+or crisp.
+• It is necessary to have fuzzy output when it is used as a controller.
+• A defuzzification unit would be there with FIS to convert fuzzy variables into crisp 
+variables.
+Functional Blocks of FIS
+The following five functional blocks will help you understand the construction of FIS −
+• Rule Base − It contains fuzzy IF-THEN rules.
+• Database − It defines the membership functions of fuzzy sets used in fuzzy rules.
+• Decision-making Unit − It performs operation on rules.
+• Fuzzification Interface Unit − It converts the crisp quantities into fuzzy quantities.
+• Defuzzification Interface Unit − It converts the fuzzy quantities into crisp quantities. 
+Following is a block diagram of fuzzy interference system.
+Working of FIS
+63
+The working of the FIS consists of the following steps −
+• A fuzzification unit supports the application of numerous fuzzification methods, and 
+converts the crisp input into fuzzy input.
+• A knowledge base - collection of rule base and database is formed upon the 
+conversion of crisp input into fuzzy input.
+• The defuzzification unit fuzzy input is finally converted into crisp output.
+Methods of FIS
+Let us now discuss the different methods of FIS. Following are the two important methods of 
+FIS, having different consequent of fuzzy rules −
+• Mamdani Fuzzy Inference System
+• Takagi-Sugeno Fuzzy Model (TS Method)
+Mamdani Fuzzy Inference System
+This system was proposed in 1975 by Ebhasim Mamdani. Basically, it was anticipated to 
+control a steam engine and boiler combination by synthesizing a set of fuzzy rules obtained 
+from people working on the system.
+Steps for Computing the Output
+Following steps need to be followed to compute the output from this FIS −
+Step 1 − Set of fuzzy rules need to be determined in this step.
+Step 2 − In this step, by using input membership function, the input would be made fuzzy.
+Step 3 − Now establish the rule strength by combining the fuzzified inputs according to 
+fuzzy rules.
+Step 4 − In this step, determine the consequent of rule by combining the rule strength and 
+the output membership function.
+Step 5 − For getting output distribution combine all the consequents.
+Step 6 − Finally, a defuzzified output distribution is obtained.
+Following is a block diagram of Mamdani Fuzzy Interface System.
+
+
+Practical 11
+
+:
+Fuzzy Control Systems: The Tipping Problem
+The ‘tipping problem’ is commonly used to illustrate the power of fuzzy logic principles to 
+generate complex behavior from a compact, intuitive set of expert rules.
+If you’re new to the world of fuzzy control systems, you might want to check out the Fuzzy 
+Control Primer before reading through this worked example.
+The Tipping Problem
+Let’s create a fuzzy control system which models how you might choose to tip at a restaurant. 
+When tipping, you consider the service and food quality, rated between 0 and 10. You use this 
+to leave a tip of between 0 and 25%.
+We would formulate this problem as:
+• Antecednets (Inputs)
+o service
+▪ Universe (ie, crisp value range): How good was the service of the wait 
+staff, on a scale of 0 to 10?
+▪ Fuzzy set (ie, fuzzy value range): poor, acceptable, amazing
+o food quality
+▪ Universe: How tasty was the food, on a scale of 0 to 10?
+▪ Fuzzy set: bad, decent, great
+• Consequents (Outputs)
+o tip
+▪ Universe: How much should we tip, on a scale of 0% to 25%
+▪ Fuzzy set: low, medium, high
+• Rules
+o IF the service was good or the food quality was good, THEN the tip will be 
+high.
+o IF the service was average, THEN the tip will be medium.
+o IF the service was poor and the food quality was poor THEN the tip will be 
+low.
+• Usage
+o If I tell this controller that I rated:
+83
+▪ the service as 9.8, and
+▪ the quality as 6.5,
+o it would recommend I leave:
+▪ a 20.2% tip.
+
+
+Practical 12
+
+Theory:
+Naïve Bayes Classifier Algorithm
+o Naïve Bayes algorithm is a supervised learning algorithm, which is based on Bayes 
+theorem and used for solving classification problems.
+o It is mainly used in text classification that includes a high-dimensional training 
+dataset.
+o Naïve Bayes Classifier is one of the simple and most effective Classification 
+algorithms which helps in building the fast machine learning models that can make 
+quick predictions.
+o It is a probabilistic classifier, which means it predicts on the basis of the probability 
+of an object.
+o Some popular examples of Naïve Bayes Algorithm are spam filtration, Sentimental 
+analysis, and classifying articles.
+Why is it called Naïve Bayes?
+The Naïve Bayes algorithm is comprised of two words Naïve and Bayes, Which can be 
+described as:
+o Naïve: It is called Naïve because it assumes that the occurrence of a certain feature is 
+independent of the occurrence of other features. Such as if the fruit is identified on the 
+bases of color, shape, and taste, then red, spherical, and sweet fruit is recognized as 
+an apple. Hence each feature individually contributes to identify that it is an apple 
+without depending on each other.
+o Bayes: It is called Bayes because it depends on the principle of Bayes' Theorem.
+Bayes' Theorem:
+o Bayes' theorem is also known as Bayes' Rule or Bayes' law, which is used to 
+determine the probability of a hypothesis with prior knowledge. It depends on the 
+conditional probability.
+o The formula for Bayes' theorem is given as:
+Where,
+P(A|B) is Posterior probability: Probability of hypothesis A on the observed event B.
+91
+P(B|A) is Likelihood probability: Probability of the evidence given that the probability of a 
+hypothesis is true.
+P(A) is Prior Probability: Probability of hypothesis before observing the evidence.
+P(B) is Marginal Probability: Probability of Evidence.
+Working of Naïve Bayes' Classifier:
+Working of Naïve Bayes' Classifier can be understood with the help of the below example:
+Suppose we have a dataset of weather conditions and corresponding target variable "Play". 
+So using this dataset we need to decide that whether we should play or not on a particular day 
+according to the weather conditions. So to solve this problem, we need to follow the below 
+steps:
+1. Convert the given dataset into frequency tables.
+2. Generate Likelihood table by finding the probabilities of given features.
+3. Now, use Bayes theorem to calculate the posterior probability.
+Problem: If the weather is sunny, then the Player should play or not?
+Solution: To solve this, first consider the below dataset:
